@@ -494,3 +494,22 @@ find /etc -iname 'pass*'  # glob pattern
 find / -size +1M #  larger than 1MB
 find / -size -1M # smaller than 1MB
 ```
+
+##Disk Usage
+### Show free and used space of disk storages
+
+```bash
+df -h
+```
+
+### Show disk space consumed by a directory or file
+```bash
+du -sh /var/log
+du -h 5MB.zip
+```
+
+### Interactive disk usage explorer
+```bash
+ncdu
+```
+
