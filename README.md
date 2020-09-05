@@ -463,4 +463,34 @@ $ lsof -i
 $ lsof -i tcp     # only TCP ports
 ```
 
+## Text Search
+### Search for a pattern in a text file
+```bash
+$ grep pattern file
 
+# For example:
+$ grep root /etc/passwd
+```
+
+### Search recursively for a pattern in a text file inside a directory
+```bash
+$ grep -R "/bin/bash" /etc
+```
+
+### Search for pattern and output N lines before (B) or after (A) pattern match
+```bash
+$ grep -B 5 root /etc/passwd
+$ grep -A 3 root /etc/passwd
+```
+
+### Find files within a directory with a matching filename
+```bash
+$ find /etc -iname 'passwd'
+$ find /etc -iname 'pass*'  # glob pattern
+```
+
+###Find files based on filesize
+```bash
+$ find / -size +1M #  larger than 1MB
+$ find / -size -1M # smaller than 1MB
+```
