@@ -143,4 +143,31 @@ $ whoami
 $ id
 ```
 
+## Hardware Information
+###Display CPU information
+
+```bash
+$ cat /proc/cpuinfo
+```
+
+### Display number of CPU cores
+```bash
+$ nproc
+```
+
+### Display memory information
+```bash
+$ cat /proc/meminfo
+```
+
+### Display environment variables of a process, e.g: PID 1
+```bash
+$ cat /proc/1/environ
+```
+
+### Display free and used memory ( -h for human-readable, -m for MB, -g for GB.)
+```bash
+$ free -h
+```
+
 
