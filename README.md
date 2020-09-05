@@ -308,6 +308,84 @@ $ tail -n 20 hello.txt
 
 ### Display the last 10 lines of a file and follow the file as it updated.
 ```bash
-tail -f hello.txt
+$ tail -f hello.txt
+```
+
+## Process Management
+A *process* is a running instance of a program.
+### Display your currently running processes
+```bash
+$ ps
+```
+
+### Display every process on the system.
+```bash
+$ ps auxf
+```
+
+### Display process information for the process name
+```bash
+$ ps uf -C processname
+```
+
+### Display interactive real-time view of running processes
+```bash
+$ top
+$ htop
+```
+
+### Look-up process ID based on a name
+```bash
+$ pgrep nginx
+```
+
+### Kill a process with a given process ID. By default TERM signal is sent
+```bash
+$ kill PID
+```
+
+### Send a custom signal to a process with given process ID
+```bash
+$ kill -s SIGNAL_NUMBER pid
+```
+
+### List all available signals
+```bash
+$ kill -l
+```
+
+### Kill a process based on a name
+```bash
+$ pkill nginx
+```
+
+### Run a command as a background job
+```bash
+$ (sleep 30; echo "woke up after 30 seconds") &
+```
+
+### List background jobs
+```bash
+$ jobs
+```
+
+### Display stopped or background jobs
+```bash
+$ bg
+```
+
+### Brings the most recent background job to the foreground
+```bash
+$ fg
+```
+
+### Brings job N to the foreground
+```bash
+$ fg N
+```
+
+### Kill job N
+```bash
+$ kill %N
 ```
 
