@@ -71,4 +71,76 @@ Search for a package that provides postgres command
 $ apt-file search bin/psql
 ```
 
+## Directory Navigation
+### Change to /home directory
+```bash
+$ cd /home
+```
+
+### Change to the previous directory
+```bash
+$ cd -
+```
+
+### Go up one level of the directory tree
+```bash
+$ cd ..
+```
+### Print’s current directory you are in
+```bash
+$ pwd
+```
+
+## System Information
+### Display Linux kernel information
+```bash
+$ uname -a
+```
+
+### Display kernel release information
+```bash
+$ uname -r
+```
+
+### Show how long the system has been running + load
+```bash
+$ uptime
+```
+
+### Show system hostname
+```bash
+$ hostname
+```
+
+### Display the IP addresses of the host
+```bash
+$ hostname -I
+```
+
+### Show system reboot history
+```bash
+$ last reboot
+```
+
+### Show the current date and time
+```bash
+$ date
+```
+
+### Show this month’s calendar
+```bash
+$ cal
+```
+
+### Display who is online
+```bash
+$ w
+```
+
+### Who you are logged in as
+```bash
+$ whoami
+$ id
+```
+
 
