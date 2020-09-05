@@ -513,3 +513,64 @@ du -h 5MB.zip
 ncdu
 ```
 
+## Pipes and Redirection
+### **REDIRECTION**
+### Redirect normal output (stdout) from a command to a file
+```bash
+echo "hello" > hello.stdout.txt
+echo "world" > hello.stdout.txt
+```
+
+### Redirect error output (stderr) from a command to a file
+```bash
+cat somefile 2> cat.stderr.txt
+```
+
+### Redirect both normal and error output from a command to a file. Useful for logging.
+```bash
+ps auxf >& processes.txt
+```
+
+### Append normal output (stdout) from a command to a file unlike > which overwrites the file
+```bash
+echo "hello" >> hello2.stdout.txt
+echo "world!" >> hello2.stdout.txt
+```
+
+### Append error output (stderr) from a command to a file
+```bash
+cat some-unknown-file 2>> cat2.stderr.txt
+```
+
+### Append both normal and error output (stderr) from a command to a file
+```bash
+ps auxf &>> processes.txt
+```
+
+### **PIPES**
+The shell pipe **is a way to **communicate between commands.
+### Create a dummy file to learn to pipe
+```bash
+mkdir pipes-example
+cd pipes-example
+touch {1..10}.txt
+```
+
+### Example 1: Let’s use sort command
+```bash
+ls -1 *.txt | sort -n    # sorts the output in ASC order
+ls -1 *.txt | sort -nr   # sorts the output in DESC order
+```
+
+### Example 2: Let’s use head & tail command
+```bash
+ls -1 *.txt | sort -n | head -n 5  # show the first 5 lines
+ls -1 *.txt | sort -n | tail -n 5  # show the last 5 lines
+```
+
+### Example 3: Search for a pattern in a text file
+```bash
+cat /etc/passwd | grep root    # show lines containing string 'root'
+```
+
+
