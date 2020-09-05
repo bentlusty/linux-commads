@@ -170,4 +170,55 @@ $ cat /proc/1/environ
 $ free -h
 ```
 
+##System Monitoring, Statistics, Debugging
+### Display and manage the running processes
+```bash
+$ top
+```
+
+###Install and use a friendly interactive process viewer (alternative to top)
+```bsah
+$ apt install htop
+$ htop
+```
+
+### Display processor related statistics (refresh every 1 second)
+```bash
+$ mpstat 1
+```
+
+### Display virtual memory statistics (refresh every 1 second)
+```bash
+$ vmstat 1
+```
+
+### Display disk I/O statistics (refresh every 1 second)
+```bash
+$ iostat 1
+```
+
+### List all open files on the system
+```bash
+$ lsof
+```
+
+### List files opened by the user (e.g: root)
+```bash
+$ lsof -u USER
+```
+
+###List files opened by a certain process with PID (e.g: 1)
+```bash
+$ lsof -p PIS
+```
+
+### Display disk space occupied by current directory ( -h for human-readable, -s summarize)
+```bash
+$ du -sh
+```
+
+### Execute “df -h”, showing periodic updates every 1 second (pro tip: -d flag shows visual updates)
+```bash
+$ watch -n1 df -h
+```
 
