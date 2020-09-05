@@ -222,3 +222,92 @@ $ du -sh
 $ watch -n1 df -h
 ```
 
+## File and Directory
+### List all files (including hidden) in a long listing human-readable format in the current directory (specifying . is optional).
+```bsah
+$ ls -hal
+```
+
+###Display the present working directory
+```bash
+$ pwd
+```
+### Create one or more new empty file
+```bash
+$ touch file1 file2
+```
+
+### Create new directory
+```bash
+$ mkdir dir1
+```
+
+### Create a directory tree using -p option
+```bash
+$ mkdir -p dir1/dir2/dir3
+```
+
+### List the directory tree using tree command
+```bash
+$ tree dir1
+```
+### Copy (duplicate) file(s) from one directory to another (-v option for enabling verbose mode)
+```bash
+$ cp -v file1 dir1/file1-copy
+```
+### Copy directory and all it’s content to a new directory
+```bash
+$ cp -vr dir1 dir1-copy
+```
+
+### Rename or move a file. If file2 is a directory, then file1 into moved into that directory
+```bash
+$ mv -v file1 file1-rename
+$ mv -v file1-rename dir1
+```
+
+### Remove a file or empty directory (-f option force deletes without asking)
+```bash
+$ rm file1
+```
+
+### Remove a directory and its contents recursively (-v option for enabling verbose mode)
+```bash
+$ rm -vr dir1
+```
+
+### Create a symbolic link (pointer) to a file or directory
+```bash
+$ ln -s file1 file1-link
+```
+
+### Write a simple text to a file
+```bash
+$ echo "hello, world!" > hello.txt
+```
+
+### View the contents of a file
+```bash
+$ cat hello.txt
+```
+
+### Paginate through a large file
+```bash
+$ less hello.txt
+```
+
+### Display the first 20 lines of a file
+```bash
+$ head -n 20 hello.txt
+```
+
+### Display the last 20 lines of a file
+```bash
+$ tail -n 20 hello.txt
+```
+
+### Display the last 10 lines of a file and follow the file as it updated.
+```bash
+tail -f hello.txt
+```
+
