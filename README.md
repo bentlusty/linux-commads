@@ -408,3 +408,59 @@ $ ls -lh file1
 $ chown user:group file1
 ```
 
+## Networking
+### Display information of all available network interfaces
+```bash
+$ ip addr
+```
+
+### Display information of eth0 interface
+```bash
+$ ip addr show eth0
+```
+
+### Display IP routing table
+```bash
+$ ip route
+```
+
+### Ping a hostname or IP address
+```bash
+$ ping google.com
+$ ping 8.8.8.8
+```
+
+### Display registration information of a domain
+```bash
+$ whois medium.com
+```
+
+### DNS lookup a domain
+```bash
+$ dig medium.com A     # IPv4 addresses
+$ dig medium.com AAAA  # IPv6 addresses
+$ dig medium.com NX    # Nameservers
+
+$ host medium.com     # IPv4 addresse
+```
+
+### Display hostname and IP address of the local machine
+```bash
+$ hostname
+$ hostname -i
+```
+
+### Download files from a remote HTTP server
+```bash
+$ wget [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
+$ curl --output 5MB.zip [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
+```
+
+### Display all process listening on TCP or UDP ports
+```bash
+$ netstat -plunt
+$ lsof -i
+$ lsof -i tcp     # only TCP ports
+```
+
+
