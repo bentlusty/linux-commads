@@ -573,4 +573,31 @@ ls -1 *.txt | sort -n | tail -n 5  # show the last 5 lines
 cat /etc/passwd | grep root    # show lines containing string 'root'
 ```
 
+## Environment Variables
+### List all environment variables
+```bash
+env
+```
 
+### Display value of an environment variable
+```bash
+echo $HOME
+echo $SHELL
+```
+
+### Create an environment variable
+```bash
+export PORT=80
+export PLATFORM=medium.com
+```
+
+### Delete an environment variable
+```bash
+unset PORT
+```
+
+### PATH is one of the common and important environment variables. What do you think will happen if you unset it?
+```bash
+echo $PATH
+unset PATH
+```
