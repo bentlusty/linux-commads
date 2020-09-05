@@ -389,3 +389,22 @@ $ fg N
 $ kill %N
 ```
 
+## File Permissions
+### Give all permission to the owner, read execute to the group and nothing to others
+```bash
+# Create a file
+$ touch file1
+
+# Set permission using either of the method
+$ chmod 750 file1
+$ chmod u=rwx,g=rx,o= file1
+
+# List the file permission
+$ ls -lh file1
+```
+
+### Change ownership of a file or directory to a given user and group
+```bash
+$ chown user:group file1
+```
+
