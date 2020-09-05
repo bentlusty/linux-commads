@@ -21,36 +21,36 @@ apt is a package manager **to manage packages in **Ubuntu Linux.
 
 Update the packages repository
 ```bash
-$ apt update
+apt update
 ```
 
 Upgrade packages in bulk
 ```bash
-$ apt
+apt
 ```
 Search for a package named htop
 ```bash
-$ apt search htop
+apt search htop
 ```
 
 Show information about a package
 ```bash
-$ apt show htop
+apt show htop
 ```
 
 Install a package named htop
 ```bash
-$ apt install htop
+apt install htop
 ```
 
 Remove a package named htop
 ```bash
-$ apt remove htop
+apt remove htop
 ```
 
 Install multiple packages
 ```bash
-$ apt install htop less
+apt install htop less
 ```
 
 ### apt-file
@@ -58,439 +58,439 @@ apt-file is a program to search for packages containing files. Very helpful if y
 
 Install apt-file using apt
 ```bash
-$ apt install apt-file
+apt install apt-file
 ```
 
 Update the apt-file cache
 ```bash
-$ apt-file update
+apt-file update
 ```
 
 Search for a package that provides postgres command
 ```bash
-$ apt-file search bin/psql
+apt-file search bin/psql
 ```
 
 ## Directory Navigation
 ### Change to /home directory
 ```bash
-$ cd /home
+cd /home
 ```
 
 ### Change to the previous directory
 ```bash
-$ cd -
+cd -
 ```
 
 ### Go up one level of the directory tree
 ```bash
-$ cd ..
+cd ..
 ```
 ### Print’s current directory you are in
 ```bash
-$ pwd
+pwd
 ```
 
 ## System Information
 ### Display Linux kernel information
 ```bash
-$ uname -a
+uname -a
 ```
 
 ### Display kernel release information
 ```bash
-$ uname -r
+uname -r
 ```
 
 ### Show how long the system has been running + load
 ```bash
-$ uptime
+uptime
 ```
 
 ### Show system hostname
 ```bash
-$ hostname
+hostname
 ```
 
 ### Display the IP addresses of the host
 ```bash
-$ hostname -I
+hostname -I
 ```
 
 ### Show system reboot history
 ```bash
-$ last reboot
+last reboot
 ```
 
 ### Show the current date and time
 ```bash
-$ date
+date
 ```
 
 ### Show this month’s calendar
 ```bash
-$ cal
+cal
 ```
 
 ### Display who is online
 ```bash
-$ w
+w
 ```
 
 ### Who you are logged in as
 ```bash
-$ whoami
-$ id
+whoami
+id
 ```
 
 ## Hardware Information
 ###Display CPU information
 
 ```bash
-$ cat /proc/cpuinfo
+cat /proc/cpuinfo
 ```
 
 ### Display number of CPU cores
 ```bash
-$ nproc
+nproc
 ```
 
 ### Display memory information
 ```bash
-$ cat /proc/meminfo
+cat /proc/meminfo
 ```
 
 ### Display environment variables of a process, e.g: PID 1
 ```bash
-$ cat /proc/1/environ
+cat /proc/1/environ
 ```
 
 ### Display free and used memory ( -h for human-readable, -m for MB, -g for GB.)
 ```bash
-$ free -h
+free -h
 ```
 
 ##System Monitoring, Statistics, Debugging
 ### Display and manage the running processes
 ```bash
-$ top
+top
 ```
 
 ###Install and use a friendly interactive process viewer (alternative to top)
 ```bsah
-$ apt install htop
-$ htop
+apt install htop
+htop
 ```
 
 ### Display processor related statistics (refresh every 1 second)
 ```bash
-$ mpstat 1
+mpstat 1
 ```
 
 ### Display virtual memory statistics (refresh every 1 second)
 ```bash
-$ vmstat 1
+vmstat 1
 ```
 
 ### Display disk I/O statistics (refresh every 1 second)
 ```bash
-$ iostat 1
+iostat 1
 ```
 
 ### List all open files on the system
 ```bash
-$ lsof
+lsof
 ```
 
 ### List files opened by the user (e.g: root)
 ```bash
-$ lsof -u USER
+lsof -u USER
 ```
 
 ###List files opened by a certain process with PID (e.g: 1)
 ```bash
-$ lsof -p PIS
+lsof -p PIS
 ```
 
 ### Display disk space occupied by current directory ( -h for human-readable, -s summarize)
 ```bash
-$ du -sh
+du -sh
 ```
 
 ### Execute “df -h”, showing periodic updates every 1 second (pro tip: -d flag shows visual updates)
 ```bash
-$ watch -n1 df -h
+watch -n1 df -h
 ```
 
 ## File and Directory
 ### List all files (including hidden) in a long listing human-readable format in the current directory (specifying . is optional).
 ```bsah
-$ ls -hal
+ls -hal
 ```
 
 ###Display the present working directory
 ```bash
-$ pwd
+pwd
 ```
 ### Create one or more new empty file
 ```bash
-$ touch file1 file2
+touch file1 file2
 ```
 
 ### Create new directory
 ```bash
-$ mkdir dir1
+mkdir dir1
 ```
 
 ### Create a directory tree using -p option
 ```bash
-$ mkdir -p dir1/dir2/dir3
+mkdir -p dir1/dir2/dir3
 ```
 
 ### List the directory tree using tree command
 ```bash
-$ tree dir1
+tree dir1
 ```
 ### Copy (duplicate) file(s) from one directory to another (-v option for enabling verbose mode)
 ```bash
-$ cp -v file1 dir1/file1-copy
+cp -v file1 dir1/file1-copy
 ```
 ### Copy directory and all it’s content to a new directory
 ```bash
-$ cp -vr dir1 dir1-copy
+cp -vr dir1 dir1-copy
 ```
 
 ### Rename or move a file. If file2 is a directory, then file1 into moved into that directory
 ```bash
-$ mv -v file1 file1-rename
-$ mv -v file1-rename dir1
+mv -v file1 file1-rename
+mv -v file1-rename dir1
 ```
 
 ### Remove a file or empty directory (-f option force deletes without asking)
 ```bash
-$ rm file1
+rm file1
 ```
 
 ### Remove a directory and its contents recursively (-v option for enabling verbose mode)
 ```bash
-$ rm -vr dir1
+rm -vr dir1
 ```
 
 ### Create a symbolic link (pointer) to a file or directory
 ```bash
-$ ln -s file1 file1-link
+ln -s file1 file1-link
 ```
 
 ### Write a simple text to a file
 ```bash
-$ echo "hello, world!" > hello.txt
+echo "hello, world!" > hello.txt
 ```
 
 ### View the contents of a file
 ```bash
-$ cat hello.txt
+cat hello.txt
 ```
 
 ### Paginate through a large file
 ```bash
-$ less hello.txt
+less hello.txt
 ```
 
 ### Display the first 20 lines of a file
 ```bash
-$ head -n 20 hello.txt
+head -n 20 hello.txt
 ```
 
 ### Display the last 20 lines of a file
 ```bash
-$ tail -n 20 hello.txt
+tail -n 20 hello.txt
 ```
 
 ### Display the last 10 lines of a file and follow the file as it updated.
 ```bash
-$ tail -f hello.txt
+tail -f hello.txt
 ```
 
 ## Process Management
 A *process* is a running instance of a program.
 ### Display your currently running processes
 ```bash
-$ ps
+ps
 ```
 
 ### Display every process on the system.
 ```bash
-$ ps auxf
+ps auxf
 ```
 
 ### Display process information for the process name
 ```bash
-$ ps uf -C processname
+ps uf -C processname
 ```
 
 ### Display interactive real-time view of running processes
 ```bash
-$ top
-$ htop
+top
+htop
 ```
 
 ### Look-up process ID based on a name
 ```bash
-$ pgrep nginx
+pgrep nginx
 ```
 
 ### Kill a process with a given process ID. By default TERM signal is sent
 ```bash
-$ kill PID
+kill PID
 ```
 
 ### Send a custom signal to a process with given process ID
 ```bash
-$ kill -s SIGNAL_NUMBER pid
+kill -s SIGNAL_NUMBER pid
 ```
 
 ### List all available signals
 ```bash
-$ kill -l
+kill -l
 ```
 
 ### Kill a process based on a name
 ```bash
-$ pkill nginx
+pkill nginx
 ```
 
 ### Run a command as a background job
 ```bash
-$ (sleep 30; echo "woke up after 30 seconds") &
+(sleep 30; echo "woke up after 30 seconds") &
 ```
 
 ### List background jobs
 ```bash
-$ jobs
+jobs
 ```
 
 ### Display stopped or background jobs
 ```bash
-$ bg
+bg
 ```
 
 ### Brings the most recent background job to the foreground
 ```bash
-$ fg
+fg
 ```
 
 ### Brings job N to the foreground
 ```bash
-$ fg N
+fg N
 ```
 
 ### Kill job N
 ```bash
-$ kill %N
+kill %N
 ```
 
 ## File Permissions
 ### Give all permission to the owner, read execute to the group and nothing to others
 ```bash
 # Create a file
-$ touch file1
+touch file1
 
 # Set permission using either of the method
-$ chmod 750 file1
-$ chmod u=rwx,g=rx,o= file1
+chmod 750 file1
+chmod u=rwx,g=rx,o= file1
 
 # List the file permission
-$ ls -lh file1
+ls -lh file1
 ```
 
 ### Change ownership of a file or directory to a given user and group
 ```bash
-$ chown user:group file1
+chown user:group file1
 ```
 
 ## Networking
 ### Display information of all available network interfaces
 ```bash
-$ ip addr
+ip addr
 ```
 
 ### Display information of eth0 interface
 ```bash
-$ ip addr show eth0
+ip addr show eth0
 ```
 
 ### Display IP routing table
 ```bash
-$ ip route
+ip route
 ```
 
 ### Ping a hostname or IP address
 ```bash
-$ ping google.com
-$ ping 8.8.8.8
+ping google.com
+ping 8.8.8.8
 ```
 
 ### Display registration information of a domain
 ```bash
-$ whois medium.com
+whois medium.com
 ```
 
 ### DNS lookup a domain
 ```bash
-$ dig medium.com A     # IPv4 addresses
-$ dig medium.com AAAA  # IPv6 addresses
-$ dig medium.com NX    # Nameservers
+dig medium.com A     # IPv4 addresses
+dig medium.com AAAA  # IPv6 addresses
+dig medium.com NX    # Nameservers
 
-$ host medium.com     # IPv4 addresse
+host medium.com     # IPv4 addresse
 ```
 
 ### Display hostname and IP address of the local machine
 ```bash
-$ hostname
-$ hostname -i
+hostname
+hostname -i
 ```
 
 ### Download files from a remote HTTP server
 ```bash
-$ wget [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
-$ curl --output 5MB.zip [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
+wget [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
+curl --output 5MB.zip [http://ipv4.download.thinkbroadband.com/5MB.zip](http://ipv4.download.thinkbroadband.com/5MB.zip)
 ```
 
 ### Display all process listening on TCP or UDP ports
 ```bash
-$ netstat -plunt
-$ lsof -i
-$ lsof -i tcp     # only TCP ports
+netstat -plunt
+lsof -i
+lsof -i tcp     # only TCP ports
 ```
 
 ## Text Search
 ### Search for a pattern in a text file
 ```bash
-$ grep pattern file
+grep pattern file
 
 # For example:
-$ grep root /etc/passwd
+grep root /etc/passwd
 ```
 
 ### Search recursively for a pattern in a text file inside a directory
 ```bash
-$ grep -R "/bin/bash" /etc
+grep -R "/bin/bash" /etc
 ```
 
 ### Search for pattern and output N lines before (B) or after (A) pattern match
 ```bash
-$ grep -B 5 root /etc/passwd
-$ grep -A 3 root /etc/passwd
+grep -B 5 root /etc/passwd
+grep -A 3 root /etc/passwd
 ```
 
 ### Find files within a directory with a matching filename
 ```bash
-$ find /etc -iname 'passwd'
-$ find /etc -iname 'pass*'  # glob pattern
+find /etc -iname 'passwd'
+find /etc -iname 'pass*'  # glob pattern
 ```
 
 ###Find files based on filesize
 ```bash
-$ find / -size +1M #  larger than 1MB
-$ find / -size -1M # smaller than 1MB
+find / -size +1M #  larger than 1MB
+find / -size -1M # smaller than 1MB
 ```
